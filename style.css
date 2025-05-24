@@ -1,0 +1,150 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: #333;
+  line-height: 1.6;
+  background-color: #fff;
+}
+
+/* Typography */
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  color: #2c3e50;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+/* Hero Section */
+.hero {
+  background: url('https://www.pinworthyeventrentals.com/uploads/1/2/3/4/12345678/hero-image.jpg') center/cover no-repeat;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(44, 62, 80, 0.5);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero .btn {
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #e0c3fc;
+  color: #2c3e50;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+/* About Section */
+.about {
+  background-color: #f9f9f9;
+  text-align: center;
+  padding: 4rem 0;
+}
+
+/* Packages Section */
+.packages {
+  background-color: #fff;
+  text-align: center;
+  padding: 4rem 0;
+}
+
+.package-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.package {
+  background-color: #fdfdfd;
+  border: 1px solid #e0c3fc;
+  border-radius: 10px;
+  padding: 2rem;
+  width: 300px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.package ul {
+  list-style: none;
+  margin-top: 1rem;
+  text-align: left;
+}
+
+.package ul li {
+  margin-bottom: 0.5rem;
+}
+
+/* Footer */
+footer {
+  background-color: #2c3e50;
+  color: #fff;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+footer a {
+  color: #e0c3fc;
+  text-decoration: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .package-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1.25rem;
+  }
+}
